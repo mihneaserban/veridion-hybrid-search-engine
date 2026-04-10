@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veridion Search</title>
+    <style>
+        /* Apple / Gemini Modern Style */
+        body {
+            margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #f2f2f7 0%, #e5e5ea 100%);
+            height: 100vh; display: flex; flex-direction: column;
+            overflow: hidden; position: relative; color: #1c1c1e;
+        }
+
+        /* -----------------------------------------
+           DYNAMIC WAVY BACKGROUND
+        ------------------------------------------ */
+        .ocean {
+            height: 35vh; width: 100%; position: absolute; bottom: 0; left: 0;
+            background: transparent; overflow: hidden; z-index: -2;
+        }
+        .wave {
+            position: absolute; width: 200%; height: 100%; bottom: 0;
+            transform: translate3d(0, 0, 0);
+        }
+        /* Stratul 1 (Cel mai din spate) */
+        .wave:nth-of-type(1) {
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23d1d1d6" fill-opacity="0.6" d="M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,149.3C672,149,768,203,864,224C960,245,1056,235,1152,208C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') repeat-x;
+            animation: wave 12s linear infinite;
+        }
+        /* Stratul 2 (Mijloc) */
+        .wave:nth-of-type(2) {
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23c7c7cc" fill-opacity="0.5" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,250.7C960,235,1056,181,1152,165.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') repeat-x;
+            animation: wave 18s linear reverse infinite;
+        }
+        /* Stratul 3 (Cel mai din fata) */
+        .wave:nth-of-type(3) {
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23aeaeb2" fill-opacity="0.3" d="M0,128L48,144C96,160,192,192,288,197.3C384,203,480,181,576,160C672,139,768,117,864,128C960,139,1056,181,1152,192C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') repeat-x;
+            animation: wave 24s linear infinite;
+        }
+        @keyframes wave { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        /* -----------------------------------------
+           DYNAMIC BUBBLES (Apple Style)
+        ------------------------------------------ */
+        .bubbles {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1; overflow: hidden; pointer-events: none;
+        }
+        .bubble {
+            position: absolute; bottom: -50px;
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            backdrop-filter: blur(4px);
+            animation: floatUp infinite ease-in;
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(0) scale(1) translateX(0); opacity: 0; }
+            10% { opacity: 1; }
+            80% { opacity: 0.8; }
+            100% { transform: translateY(-100vh) scale(1.8) translateX(20px); opacity: 0; }
+        }
+
+        /* -----------------------------------------
+           MAIN LAYOUT
+        ------------------------------------------ */
+        .container {
+            height: 100vh; display: flex; flex-direction: column;
+            max-width: 900px; margin: 0 auto; width: 100%;
+            padding: 20px; box-sizing: border-box;
+        }
+
+        .welcome { flex: 1; display: flex; align-items: center; justify-content: center; transition: opacity 0.5s ease, height 0.5s ease; flex-direction: column;}
+        .welcome h1 { font-size: 3rem; background: -webkit-linear-gradient(45deg, #1c1c1e, #8e8e93); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 10px; text-align: center; font-weight: 800; letter-spacing: -1px;}
+        .welcome p { color: #8e8e93; font-size: 1.1rem; }
+
+        .chat-area {
+            flex: 1 1 auto; min-height: 0; overflow-y: auto; display: none;
+            flex-direction: column; gap: 20px; padding: 20px 0; scroll-behavior: smooth;
+        }
+        .chat-area::-webkit-scrollbar { width: 6px; }
+        .chat-area::-webkit-scrollbar-thumb { background: #c7c7cc; border-radius: 10px; }
+
+        .msg { padding: 15px 20px; border-radius: 20px; max-width: 85%; line-height: 1.5; font-size: 1.05rem; animation: fadeIn 0.3s ease-in-out; box-sizing: border-box;}
+        .user-msg { background: #1c1c1e; color: white; align-self: flex-end; border-bottom-right-radius: 4px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);}
+        .sys-msg { background: transparent; color: #1c1c1e; align-self: flex-start; width: 100%; max-width: 100%; padding: 0; box-sizing: border-box;}
+
+        /* -----------------------------------------
+           NEW FILE INFO CARD
+        ------------------------------------------ */
+        .file-info {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+            padding: 22px 24px;
+            border-radius: 18px;
+            margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            box-sizing: border-box;
+            animation: slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .file-info-title {
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            font-size: 1.3rem; font-weight: 700; color: #1c1c1e; margin-bottom: 8px;
+        }
+        .file-info-path {
+            font-size: 0.95rem; color: #8e8e93; text-align: center;
+        }
+        .file-info-path code {
+            background: rgba(0,0,0,0.04); padding: 4px 8px; border-radius: 6px;
+            color: #3a3a3c; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+
+        .company-card {
+            background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
+            border-radius: 16px; padding: 20px; margin-top: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.06);
+            transition: transform 0.2s, box-shadow 0.2s; width: 100%; box-sizing: border-box;
+        }
+        .company-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+        .card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+        .badge { background: #1c1c1e; color: white; padding: 5px 12px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; }
+        .company-name { font-size: 1.25rem; font-weight: 700; color: #1c1c1e; letter-spacing: -0.5px;}
+        .company-desc { color: #3a3a3c; font-size: 0.98rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.6;}
+
+        .input-container { flex-shrink: 0; padding: 15px 0; width: 100%; box-sizing: border-box; }
+        .input-box { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(25px); border: 1px solid rgba(0,0,0,0.1); border-radius: 30px; padding: 10px 15px 10px 25px; display: flex; align-items: center; box-shadow: 0 10px 40px rgba(0,0,0,0.06); transition: box-shadow 0.3s ease, transform 0.2s;}
+        .input-box:focus-within { box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12); transform: translateY(-1px);}
+        input { border: none; outline: none; background: transparent; flex: 1; font-size: 1.15rem; color: #1c1c1e; font-family: inherit;}
+        input::placeholder { color: #8e8e93; }
+        button { background: #1c1c1e; color: white; border: none; width: 48px; height: 48px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; margin-left: 10px; flex-shrink: 0;}
+        button:hover { background: #3a3a3c; transform: scale(1.05); }
+        button:disabled { background: #c7c7cc; cursor: not-allowed; transform: none;}
+
+        .loader { width: 22px; height: 22px; border: 3px solid rgba(255,255,255,0.3); border-radius: 50%; border-top-color: #fff; animation: spin 1s ease-in-out infinite; display: none; }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-15px) scale(0.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    </style>
+</head>
+<body>
+    <!-- WAVY BACKGROUND -->
+    <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+
+    <!-- APPLE BUBBLES -->
+    <div class="bubbles" id="bubbles-container"></div>
+
+    <div class="container">
+        <!-- Welcome Screen -->
+        <div class="welcome" id="welcome">
+            <h1>Veridion Search Engine</h1>
+            <p>B2B Hybrid Discovery Pipeline</p>
+        </div>
+
+        <!-- Chat Area -->
+        <div class="chat-area" id="chat-area"></div>
+
+        <!-- Input Bar -->
+        <div class="input-container">
+            <div class="input-box">
+                <input type="text" id="queryInput" placeholder="Insert your query..." autocomplete="off" onkeypress="handleKeyPress(event)">
+                <button id="sendBtn" onclick="sendQuery()">
+                    <!-- Send Icon SVG -->
+                    <svg id="sendIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    <!-- Loader Spinner -->
+                    <div class="loader" id="loader"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Generate Dynamic Bubbles
+        function createBubbles() {
+            const container = document.getElementById('bubbles-container');
+            for (let i = 0; i < 15; i++) {
+                let bubble = document.createElement('div');
+                bubble.className = 'bubble';
+                let size = Math.random() * 40 + 10; // Sizes between 10px and 50px
+                bubble.style.width = `${size}px`;
+                bubble.style.height = `${size}px`;
+                bubble.style.left = `${Math.random() * 100}%`;
+                bubble.style.animationDuration = `${Math.random() * 8 + 6}s`; // 6s to 14s
+                bubble.style.animationDelay = `${Math.random() * 5}s`;
+                container.appendChild(bubble);
+            }
+        }
+        createBubbles();
+
+        const welcomeScreen = document.getElementById('welcome');
+        const chatArea = document.getElementById('chat-area');
+        const inputField = document.getElementById('queryInput');
+        const sendBtn = document.getElementById('sendBtn');
+        const sendIcon = document.getElementById('sendIcon');
+        const loader = document.getElementById('loader');
+
+        function handleKeyPress(e) {
+            if (e.key === 'Enter') sendQuery();
+        }
+
+        async function sendQuery() {
+            const query = inputField.value.trim();
+            if (!query) return;
+
+            // UI Transitions
+            welcomeScreen.style.display = 'none';
+            chatArea.style.display = 'flex';
+
+            // Add User Message
+            addMessage(query, 'user-msg');
+            inputField.value = '';
+
+            // UI Loading state
+            inputField.disabled = true;
+            sendBtn.disabled = true;
+            sendIcon.style.display = 'none';
+            loader.style.display = 'block';
+
+            try {
+                const response = await fetch('/api/search', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query: query })
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    addMessage(`❌ Python Error: ${data.error} (Check PyCharm console!)`, 'sys-msg');
+                    return;
+                }
+
+                // Add System Response
+                renderResults(data.output_path, data.results);
+
+            } catch (error) {
+                addMessage("Connection error to the Veridion server.", 'sys-msg');
+            } finally {
+                inputField.disabled = false;
+                sendBtn.disabled = false;
+                sendIcon.style.display = 'block';
+                loader.style.display = 'none';
+                inputField.focus();
+                scrollToBottom();
+            }
+        }
+
+        function addMessage(text, className) {
+            const div = document.createElement('div');
+            div.className = `msg ${className}`;
+            div.textContent = text;
+            chatArea.appendChild(div);
+            scrollToBottom();
+        }
+
+        function renderResults(outputPath, results) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'msg sys-msg';
+
+            // Modern Document SVG Icon (No more yellow emoji)
+            const docIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1c1c1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>`;
+
+            // File Save Info (Premium Card)
+            const fileInfo = document.createElement('div');
+            fileInfo.className = 'file-info';
+            fileInfo.innerHTML = `
+                <div class="file-info-title">
+                    ${docIcon}
+                    <span>Results Saved Successfully</span>
+                </div>
+                <div class="file-info-path">Location: <code>${outputPath}</code></div>
+            `;
+            wrapper.appendChild(fileInfo);
+
+            if (results.length === 0) {
+                wrapper.innerHTML += `<div class="company-card"><p style="text-align: center; color: #8e8e93; font-weight: 500;">No companies found matching the criteria.</p></div>`;
+            } else {
+                // Render Top 10 Cards
+                results.forEach((comp, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'company-card';
+
+                    const name = comp.operational_name || 'Unknown';
+                    const desc = comp.description || 'No description available.';
+                    const score = (comp.hybrid_final_score || 0).toFixed(4);
+
+                    card.innerHTML = `
+                        <div class="card-header">
+                            <span class="badge">#${index + 1}</span>
+                            <span class="company-name">${name}</span>
+                            <span style="color: #8e8e93; font-size: 0.9rem; margin-left: auto; font-weight: 500;">Score: <span style="color: #1c1c1e; font-weight: 700;">${score}</span></span>
+                        </div>
+                        <div class="company-desc">${desc}</div>
+                    `;
+                    wrapper.appendChild(card);
+                });
+            }
+
+            chatArea.appendChild(wrapper);
+            setTimeout(scrollToBottom, 50);
+        }
+
+        function scrollToBottom() {
+            chatArea.scrollTop = chatArea.scrollHeight;
+        }
+    </script>
+</body>
+</html>

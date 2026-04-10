@@ -1,0 +1,588 @@
+Searched query : Pharmaceutical companies in Switzerland
+================================================================================
+Top 10 ranking :
+================================================================================
+ 1 | Final score : 1.1793 | Sumitomo Pharma Switzerland
+     [ Note ]: + 0.25 ( Deep Cross-Encoder ) | + 0.10 ( Dual Match ) | + 0.06 ( Lexical BM25 ) | + 0.05 ( Geographic Match )
+ 2 | Final score : 1.0218 | Helsinn
+     [ Note ]: + 0.23 ( Deep Cross-Encoder ) | + 0.10 ( Dual Match ) | + 0.03 ( Lexical BM25 ) | + 0.05 ( Geographic Match )
+ 3 | Final score : 1.0068 | Siegfried
+     [ Note ]: + 0.20 ( Deep Cross-Encoder ) | + 0.10 ( Dual Match ) | + 0.05 ( Lexical BM25 ) | + 0.05 ( Geographic Match )
+ 4 | Final score : 1.0060 | A. Menarini
+     [ Note ]: + 0.22 ( Deep Cross-Encoder ) | + 0.10 ( Dual Match ) | + 0.03 ( Lexical BM25 ) | + 0.05 ( Geographic Match )
+ 5 | Final score : 0.9987 | Tillotts Pharma
+     [ Note ]: + 0.21 ( Deep Cross-Encoder ) | + 0.10 ( Dual Match ) | + 0.03 ( Lexical BM25 ) | + 0.05 ( Geographic Match )
+ 6 | Final score : 0.9793 | Acino
+     [ Note ]: + 0.23 ( Deep Cross-Encoder ) | + 0.10 ( Dual Match ) | + 0.03 ( Lexical BM25 ) | + 0.05 ( Geographic Match )
+ 7 | Final score : 0.9682 | TRB Chemedica
+     [ Note ]: + 0.21 ( Deep Cross-Encoder ) | + 0.10 ( Dual Match ) | + 0.03 ( Lexical BM25 ) | + 0.05 ( Geographic Match )
+ 8 | Final score : 0.9536 | Idorsia
+     [ Note ]: + 0.20 ( Deep Cross-Encoder ) | + 0.10 ( Dual Match ) | + 0.03 ( Lexical BM25 ) | + 0.05 ( Geographic Match )
+ 9 | Final score : 0.9480 | KD Pharma Group
+     [ Note ]: + 0.18 ( Deep Cross-Encoder ) | + 0.10 ( Dual Match ) | + 0.03 ( Lexical BM25 ) | + 0.05 ( Geographic Match )
+10 | Final score : 0.9406 | AbelaPharm
+     [ Note ]: + 0.21 ( Deep Cross-Encoder ) | + 0.10 ( Dual Match ) | + 0.03 ( Lexical BM25 ) | + 0.05 ( Geographic Match )
+
+
+================================================================================
+Complete details for the companies
+================================================================================
+
+Place 1 : Sumitomo Pharma Switzerland 
+{
+    "website": "sumitomo-pharma.com",
+    "operational_name": "Sumitomo Pharma Switzerland",
+    "year_founded": 2023.0,
+    "address": {
+        "country_code": "ch",
+        "latitude": 47.5492808,
+        "longitude": 7.5926854,
+        "region_name": "Basel-City",
+        "town": "Basel"
+    },
+    "employee_count": 6250.0,
+    "revenue": 3530647340.0,
+    "primary_naics": {
+        "code": "325412",
+        "label": "Pharmaceutical Preparation Manufacturing"
+    },
+    "description": "Sumitomo Pharma Switzerland GmbH is a Swiss pharmaceutical company engaged in the manufacturing and distribution of pharmaceutical products, with a focus on oncology, urology, women’s health, rare diseases, cell and gene therapies, and central nervous system disorders. The company also conducts research and development activities, including drug discovery and product development, and is involved in co-promotion agreements. Sumitomo Pharma Switzerland serves markets in the U.S., Canada, and Europe, and is part of a global network of subsidiaries and affiliates supporting its operations in these regions.",
+    "business_model": [
+        "Business-to-Business",
+        "Manufacturing",
+        "Wholesale"
+    ],
+    "target_markets": [
+        "Biotechnology",
+        "Healthcare",
+        "Pharmaceuticals"
+    ],
+    "core_offerings": [
+        "Women’s Health Drug Development",
+        "Pharmaceutical Research and Development",
+        "Pharmaceutical Manufacturing and Distribution",
+        "Healthcare Innovation Solutions",
+        "Psychiatry Drug Development",
+        "Oncology Drug Development",
+        "Drug Discovery Services",
+        "Therapeutic Product Development",
+        "Data-Driven Pharmaceutical Marketing",
+        "Urology Drug Development",
+        "Cell and Gene Therapy Development",
+        "CNS Drug Development",
+        "Rare Disease Drug Development",
+        "Co-Promotion Agreement Services",
+        "Neurology Drug Development"
+    ],
+    "is_public": false,
+    "secondary_naics": null,
+    "bm25_score": 12.026181582276925,
+    "source_stage0": true,
+    "source_stage1": true,
+    "semantic_score": 0.7192128896713257,
+    "hybrid_final_score": 1.1793437975827104,
+    "soft_filter_note": "+ 0.25 ( Deep Cross-Encoder ) | + 0.10 ( Dual Match ) | + 0.06 ( Lexical BM25 ) | + 0.05 ( Geographic Match )"
+}
+
+--------------------------------------------------------------------------------
+
+Place 2 : Helsinn 
+{
+    "website": "helsinn.com",
+    "operational_name": "Helsinn",
+    "year_founded": 1976.0,
+    "address": {
+        "country_code": "ch",
+        "latitude": 45.9856424,
+        "longitude": 8.9343448,
+        "region_name": "Ticino",
+        "town": "Lugano"
+    },
+    "employee_count": 364.0,
+    "revenue": 556666094.0,
+    "primary_naics": {
+        "code": "325412",
+        "label": "Pharmaceutical Preparation Manufacturing"
+    },
+    "description": "Helsinn Healthcare SA is a Swiss pharmaceutical company engaged in the research, development, manufacturing, and commercialization of pharmaceuticals, medical devices, and nutritional supplements. The company operates in oncology, rare diseases, and supportive care, and manages a global portfolio of products approved in multiple countries. Helsinn also provides licensing services, including in-licensing, partnering, and business development, and maintains a pharmacovigilance system for adverse event monitoring. The company is certified for sustainability and ethical standards, and its operations are supported by a hybrid manufacturing approach and a global presence with offices in Ireland, the United States, and China.",
+    "business_model": [
+        "Business-to-Business",
+        "Manufacturing",
+        "Licensing"
+    ],
+    "target_markets": [
+        "Biotechnology",
+        "Healthcare",
+        "Pharmaceuticals"
+    ],
+    "core_offerings": [
+        "Pharmaceutical Commercialization and Distribution",
+        "Pharmaceutical Research and Development",
+        "Pharmacovigilance Services",
+        "Pharmaceutical Manufacturing",
+        "Oncology Drug Development",
+        "Direct Pharmaceutical Sales",
+        "Supportive Care Product Development",
+        "Pharmaceutical Business Development Services",
+        "Pharmaceutical Licensing and Partnerships",
+        "Nutritional Supplement Manufacturing",
+        "Medical Device Manufacturing",
+        "Rare Disease Drug Development"
+    ],
+    "is_public": false,
+    "secondary_naics": null,
+    "bm25_score": 5.693157786329577,
+    "source_stage0": true,
+    "source_stage1": true,
+    "semantic_score": 0.6171014904975891,
+    "hybrid_final_score": 1.0217714178839996,
+    "soft_filter_note": "+ 0.23 ( Deep Cross-Encoder ) | + 0.10 ( Dual Match ) | + 0.03 ( Lexical BM25 ) | + 0.05 ( Geographic Match )"
+}
+
+--------------------------------------------------------------------------------
+
+Place 3 : Siegfried 
+{
+    "website": "siegfried.ch",
+    "operational_name": "Siegfried",
+    "year_founded": 1873.0,
+    "address": {
+        "country_code": "ch",
+        "latitude": 47.2883558,
+        "longitude": 7.9396303,
+        "region_name": "Aargau",
+        "town": "Zofingen"
+    },
+    "employee_count": 3500.0,
+    "revenue": 2105055517.0,
+    "primary_naics": {
+        "code": "325411",
+        "label": "Medicinal and Botanical Manufacturing"
+    },
+    "description": "Siegfried AG is a Swiss contract development and manufacturing organization engaged in the production of active pharmaceutical ingredients, intermediates, and finished dosage forms. The company provides services including process development, optimization, registration, production, packaging, and logistics for pharmaceutical and chemical clients. Siegfried operates multiple production sites in Switzerland, Germany, Spain, France, Malta, the USA, and China, and is ISO certified. The company also engages in research and development activities and is a member of the Dow Jones Sustainability Index Europe.",
+    "business_model": [
+        "Service Provider",
+        "Business-to-Business",
+        "Enterprise",
+        "Manufacturing"
+    ],
+    "target_markets": [
+        "Chemicals",
+        "Pharmaceuticals"
+    ],
+    "core_offerings": [
+        "Pharmaceutical Logistics and Distribution",
+        "Pharmaceutical Intermediate Manufacturing",
+        "Pharmaceutical Research and Development",
+        "Sustainable Pharmaceutical Manufacturing Solutions",
+        "Advanced Pharmaceutical Technology Implementation",
+        "Pharmaceutical Registration Support Services",
+        "Pharmaceutical Packaging and Labeling Services",
+        "Active Pharmaceutical Ingredient Manufacturing",
+        "Global Pharmaceutical Supply Chain Management",
+        "Pharmaceutical Process Development and Optimization",
+        "Pharmaceutical CDMO Services",
+        "Finished Dosage Form Manufacturing"
+    ],
+    "is_public": true,
+    "secondary_naics": null,
+    "bm25_score": 10.090390002500616,
+    "source_stage0": true,
+    "source_stage1": true,
+    "semantic_score": 0.6059467792510986,
+    "hybrid_final_score": 1.006761084152561,
+    "soft_filter_note": "+ 0.20 ( Deep Cross-Encoder ) | + 0.10 ( Dual Match ) | + 0.05 ( Lexical BM25 ) | + 0.05 ( Geographic Match )"
+}
+
+--------------------------------------------------------------------------------
+
+Place 4 : A. Menarini 
+{
+    "website": "menarini.ch",
+    "operational_name": "A. Menarini",
+    "year_founded": 1996.0,
+    "address": {
+        "country_code": "ch",
+        "latitude": 47.413863,
+        "longitude": 8.5520167,
+        "region_name": "Zurich",
+        "town": "Zurich"
+    },
+    "employee_count": 276.0,
+    "revenue": 59272245.0,
+    "primary_naics": {
+        "code": "325412",
+        "label": "Pharmaceutical Preparation Manufacturing"
+    },
+    "description": "A. Menarini GmbH is a Swiss pharmaceutical company engaged in the development, manufacturing, and distribution of medicinal products for primary and specialty care, with a focus on cardiovascular diseases, pain management, infectiology, allergology, and urology. The company also operates in medical aesthetics and provides laboratory services. A. Menarini serves both general practitioners and specialists, and is part of a global network with a presence in 140 countries.",
+    "business_model": [
+        "Business-to-Business",
+        "Manufacturing",
+        "Wholesale"
+    ],
+    "target_markets": [
+        "Consumer Health",
+        "Healthcare",
+        "Pharmaceuticals"
+    ],
+    "core_offerings": [
+        "Pharmaceutical Quality Assurance Services",
+        "Specialty Care Pharmaceutical Distribution",
+        "Diabetology Pharmaceutical Distribution",
+        "Medical Aesthetic Product Distribution",
+        "Allergology Pharmaceutical Distribution",
+        "Pharmaceutical Research and Development",
+        "Urology Pharmaceutical Distribution",
+        "Pharmaceutical Product Sales",
+        "Gout and Arthritis Pharmaceutical Distribution",
+        "Primary Care Pharmaceutical Distribution",
+        "Pain Management Pharmaceutical Distribution",
+        "Infectiology Pharmaceutical Distribution",
+        "Pharmaceutical Product Manufacturing",
+        "Pharmaceutical Product Distribution",
+        "Cardiovascular Disease Pharmaceutical Distribution"
+    ],
+    "is_public": false,
+    "secondary_naics": null,
+    "bm25_score": 6.216172890344907,
+    "source_stage0": true,
+    "source_stage1": true,
+    "semantic_score": 0.6032569408416748,
+    "hybrid_final_score": 1.0059655197835184,
+    "soft_filter_note": "+ 0.22 ( Deep Cross-Encoder ) | + 0.10 ( Dual Match ) | + 0.03 ( Lexical BM25 ) | + 0.05 ( Geographic Match )"
+}
+
+--------------------------------------------------------------------------------
+
+Place 5 : Tillotts Pharma 
+{
+    "website": "tillotts.com",
+    "operational_name": "Tillotts Pharma",
+    "year_founded": 1986.0,
+    "address": {
+        "country_code": "ch",
+        "latitude": 47.5511197,
+        "longitude": 7.785452117,
+        "region_name": "Aargau",
+        "town": "Rheinfelden"
+    },
+    "employee_count": 310.0,
+    "revenue": 474083761.0,
+    "primary_naics": {
+        "code": "325412",
+        "label": "Pharmaceutical Preparation Manufacturing"
+    },
+    "description": "Tillotts Pharma AG is a Swiss pharmaceutical company engaged in the development, in/out-licensing, and marketing of pharmaceutical products for gastroenterology, with a focus on inflammatory bowel diseases. The company also operates as a contract manufacturer and conducts research and development in controlled release technologies. Tillotts Pharma serves global markets through affiliates and strategic partnerships, and is part of the Japanese Zeria Group.",
+    "business_model": [
+        "Business-to-Business",
+        "Manufacturing",
+        "Licensing"
+    ],
+    "target_markets": [
+        "Healthcare",
+        "Pharmaceuticals"
+    ],
+    "core_offerings": [
+        "Gastroenterology Education Services",
+        "GI Therapeutic Research and Development",
+        "Pharmaceutical Product Marketing and Distribution",
+        "Strategic Partnership Development",
+        "Pharmaceutical Research Collaboration",
+        "Affiliate Network Product Distribution",
+        "Specialty Pharmaceutical Development",
+        "Pharmaceutical Pharmacovigilance Services",
+        "Patient Care Improvement Services",
+        "Gastroenterology Drug In-Licensing",
+        "Medical Knowledge Advancement Services"
+    ],
+    "is_public": false,
+    "secondary_naics": null,
+    "bm25_score": 5.710193049036012,
+    "source_stage0": true,
+    "source_stage1": true,
+    "semantic_score": 0.6081888675689697,
+    "hybrid_final_score": 0.9986822151605588,
+    "soft_filter_note": "+ 0.21 ( Deep Cross-Encoder ) | + 0.10 ( Dual Match ) | + 0.03 ( Lexical BM25 ) | + 0.05 ( Geographic Match )"
+}
+
+--------------------------------------------------------------------------------
+
+Place 6 : Acino 
+{
+    "website": "acino.swiss",
+    "operational_name": "Acino",
+    "year_founded": 2008.0,
+    "address": {
+        "country_code": "ch",
+        "latitude": 47.413863,
+        "longitude": 8.5520167,
+        "region_name": "Zurich",
+        "town": "Zurich"
+    },
+    "employee_count": 2473.0,
+    "revenue": 3781964972.0,
+    "primary_naics": {
+        "code": "325412",
+        "label": "Pharmaceutical Preparation Manufacturing"
+    },
+    "description": "Acino International AG is a Swiss pharmaceutical company engaged in the development, manufacturing, and international marketing of pharmaceuticals, including prescription medicines, over-the-counter products, and food supplements. The company operates in therapeutic areas such as aesthetics, allergology, cardiovascular diseases, and women’s health, and provides contract manufacturing and out-licensing services to pharmaceutical companies. Acino also offers pharmacovigilance services and is certified in EU GMP and B-BBEE. The company serves clients in over 90 countries, with a presence in the Middle East, Turkey, Africa, Ukraine, Eurasian countries, and Latin America.",
+    "business_model": [
+        "Licensing",
+        "Manufacturing",
+        "Business-to-Business",
+        "Service Provider",
+        "Enterprise"
+    ],
+    "target_markets": [
+        "Healthcare",
+        "Pharmaceuticals"
+    ],
+    "core_offerings": [
+        "Pharmaceutical Quality Assurance Services",
+        "Strategic Pharmaceutical Partnership Development",
+        "Pharmaceutical Out-Licensing Solutions",
+        "Pharmaceutical Product Development",
+        "Contract Pharmaceutical Manufacturing",
+        "Advanced Drug Delivery System Development",
+        "Over-the-Counter Product Manufacturing",
+        "Pharmaceutical Out-Licensing Services",
+        "Pharmaceutical Pharmacovigilance Services",
+        "Prescription Medicine Manufacturing",
+        "Novel Drug Formulation Development",
+        "Pharmaceutical Product International Distribution",
+        "Pharmaceutical Product Manufacturing",
+        "Food Supplement Manufacturing"
+    ],
+    "is_public": false,
+    "secondary_naics": null,
+    "bm25_score": 6.014693241851862,
+    "source_stage0": true,
+    "source_stage1": true,
+    "semantic_score": 0.5650894641876221,
+    "hybrid_final_score": 0.9793080975179863,
+    "soft_filter_note": "+ 0.23 ( Deep Cross-Encoder ) | + 0.10 ( Dual Match ) | + 0.03 ( Lexical BM25 ) | + 0.05 ( Geographic Match )"
+}
+
+--------------------------------------------------------------------------------
+
+Place 7 : TRB Chemedica 
+{
+    "website": "trbchemedica.com",
+    "operational_name": "TRB Chemedica",
+    "year_founded": 1980.0,
+    "address": {
+        "country_code": "ch",
+        "latitude": 46.18307125,
+        "longitude": 6.1297004408,
+        "region_name": "Geneva",
+        "town": "Carouge"
+    },
+    "employee_count": 330.0,
+    "revenue": 504669810.0,
+    "primary_naics": {
+        "code": "325412",
+        "label": "Pharmaceutical Preparation Manufacturing"
+    },
+    "description": "TRB CHEMEDICA INTERNATIONAL SA, DBA TRB Chemedica, is a Swiss pharmaceutical company engaged in the development, manufacturing, and distribution of hyaluronic acid-based medical devices, medical food supplements, and pharmaceutical products. The company operates a Swiss manufacturing facility and maintains subsidiaries and distributors in multiple countries across Asia, South America, Europe, and the United Kingdom. TRB Chemedica is ISO certified and is active in the pharmaceutical, biotechnology, and medical device sectors, with a focus on ophthalmology, rheumatology, and neurology.",
+    "business_model": [
+        "Business-to-Business",
+        "Manufacturing",
+        "Wholesale"
+    ],
+    "target_markets": [
+        "Biotechnology",
+        "Healthcare",
+        "Pharmaceuticals"
+    ],
+    "core_offerings": [
+        "Rheumatology Product Development and Manufacturing",
+        "Pharmaceutical Product Promotion Services",
+        "Pharmaceutical Licensing Services",
+        "Global Medical Device Distribution",
+        "Custom Pharmaceutical Solution Development",
+        "Ophthalmology Product Development and Manufacturing",
+        "Pharmaceutical Product Research and Development",
+        "Active Pharmaceutical Ingredient Manufacturing",
+        "Neurology Product Development and Manufacturing",
+        "Global Pharmaceutical Product Distribution",
+        "Medical Device Manufacturing",
+        "Biofermentative Medical Device Development",
+        "Medical Food Supplement Manufacturing",
+        "Scientific Collaboration Services"
+    ],
+    "is_public": false,
+    "secondary_naics": null,
+    "bm25_score": 5.876471390980018,
+    "source_stage0": true,
+    "source_stage1": true,
+    "semantic_score": 0.575615644454956,
+    "hybrid_final_score": 0.9681579703426952,
+    "soft_filter_note": "+ 0.21 ( Deep Cross-Encoder ) | + 0.10 ( Dual Match ) | + 0.03 ( Lexical BM25 ) | + 0.05 ( Geographic Match )"
+}
+
+--------------------------------------------------------------------------------
+
+Place 8 : Idorsia 
+{
+    "website": "idorsia.com",
+    "operational_name": "Idorsia",
+    "year_founded": 2017.0,
+    "address": {
+        "country_code": "ch",
+        "latitude": 47.5565599,
+        "longitude": 7.545484,
+        "region_name": "Basel-Landschaft",
+        "town": "Allschwil"
+    },
+    "employee_count": 1200.0,
+    "revenue": 1835162946.0,
+    "primary_naics": {
+        "code": "325412",
+        "label": "Pharmaceutical Preparation Manufacturing"
+    },
+    "description": "Idorsia Pharmaceuticals Ltd is a Swiss biopharmaceutical company engaged in the discovery, development, and commercialization of small molecule therapeutics. The company operates in the pharmaceutical and biotechnology sectors, with activities including research and development, medical and pharmaceutical manufacturing, and the commercialization of pharmaceutical products. Idorsia serves global markets through subsidiaries in multiple countries and is publicly traded on the Swiss stock exchange.",
+    "business_model": [
+        "Business-to-Business",
+        "Manufacturing"
+    ],
+    "target_markets": [
+        "Biotechnology",
+        "Pharmaceuticals"
+    ],
+    "core_offerings": [
+        "Small Molecule Therapeutics Development",
+        "Small Molecule Therapeutics Discovery",
+        "Therapeutic Asset Advancement",
+        "Biopharmaceutical Research and Development",
+        "Strategic Partnership Development",
+        "Pharmaceutical Manufacturing",
+        "Innovative Medicine Commercialization",
+        "Patient-Centric Treatment Solutions",
+        "Global Pharmaceutical Distribution"
+    ],
+    "is_public": false,
+    "secondary_naics": null,
+    "bm25_score": 5.641781396641252,
+    "source_stage0": true,
+    "source_stage1": true,
+    "semantic_score": 0.570997953414917,
+    "hybrid_final_score": 0.9536206400827579,
+    "soft_filter_note": "+ 0.20 ( Deep Cross-Encoder ) | + 0.10 ( Dual Match ) | + 0.03 ( Lexical BM25 ) | + 0.05 ( Geographic Match )"
+}
+
+--------------------------------------------------------------------------------
+
+Place 9 : KD Pharma Group 
+{
+    "website": "kdpharmagroup.com",
+    "operational_name": "KD Pharma Group",
+    "year_founded": 1988.0,
+    "address": {
+        "country_code": "ch",
+        "latitude": 46.009376,
+        "longitude": 8.910766,
+        "region_name": "Ticino",
+        "town": "Bioggio"
+    },
+    "employee_count": 290.0,
+    "revenue": 305860491.0,
+    "primary_naics": {
+        "code": "325412",
+        "label": "Pharmaceutical Preparation Manufacturing"
+    },
+    "description": "KD Pharma Group SA is a Swiss contract development and manufacturing organization engaged in pharmaceutical and nutraceutical solutions. The company provides services in custom synthesis, purification, separation, chemical synthesis, encapsulation, packaging, and the production of finished dosage forms for pharmaceutical, nutraceutical, and specialty chemical markets. KD Pharma Group also operates as a manufacturer of APIs for Omega-3 pharmaceuticals and nutraceuticals, and offers formulation and encapsulation services. The company is certified and is a member of the Deutsche Medizinal-Cannabis Gesellschaft.",
+    "business_model": [
+        "Service Provider",
+        "Business-to-Business",
+        "Enterprise",
+        "Manufacturing"
+    ],
+    "target_markets": [
+        "Specialty Chemicals",
+        "Pharmaceuticals",
+        "Nutraceuticals"
+    ],
+    "core_offerings": [
+        "Pharmaceutical and Nutraceutical CDMO Services",
+        "Pharmaceutical and Nutraceutical Catalysis Services",
+        "Lipid and Small Molecule Synthesis",
+        "Custom API Synthesis and Purification",
+        "Finished Dosage Form Packaging",
+        "Pharmaceutical and Nutraceutical Extraction Services",
+        "Cannabidiol and CBD Product Development",
+        "Nutraceutical Formulation and Encapsulation",
+        "Softgel and Liquid Dosage Form Manufacturing",
+        "Supercritical Fluid Chromatography Services",
+        "Omega-3 API and Nutraceutical Manufacturing",
+        "Plant and Algae Extract Processing",
+        "Sustainable Health Solution Development"
+    ],
+    "is_public": false,
+    "secondary_naics": null,
+    "bm25_score": 5.343083881582655,
+    "source_stage0": true,
+    "source_stage1": true,
+    "semantic_score": 0.5874224305152893,
+    "hybrid_final_score": 0.9479641176423204,
+    "soft_filter_note": "+ 0.18 ( Deep Cross-Encoder ) | + 0.10 ( Dual Match ) | + 0.03 ( Lexical BM25 ) | + 0.05 ( Geographic Match )"
+}
+
+--------------------------------------------------------------------------------
+
+Place 10 : AbelaPharm 
+{
+    "website": "abelapharm.ch",
+    "operational_name": "AbelaPharm",
+    "year_founded": 2006.0,
+    "address": {
+        "country_code": "ch",
+        "latitude": 47.3612091,
+        "longitude": 8.5483803595,
+        "region_name": "Zurich",
+        "town": "Zurich"
+    },
+    "employee_count": 500.0,
+    "revenue": 21829920.0,
+    "primary_naics": {
+        "code": "325412",
+        "label": "Pharmaceutical Preparation Manufacturing"
+    },
+    "description": "Abela Pharm GmbH, DBA AbelaPharm, is a Swiss pharmaceutical company engaged in the development, production, and distribution of natural and licensed dietary supplements. The company also operates as a manufacturer of pharmaceutical products and provides expertise in media and pharmaceutical marketing, as well as commercial knowledge related to dietary supplements. AbelaPharm serves a global market, with operations in multiple countries across Europe, the Balkans, and the Middle East, and is expanding its presence in the UAE.",
+    "business_model": [
+        "Business-to-Business",
+        "Manufacturing",
+        "Wholesale"
+    ],
+    "target_markets": [
+        "Healthcare",
+        "Pharmaceuticals"
+    ],
+    "core_offerings": [
+        "Gastroenterology Supplement Manufacturing",
+        "Pulmonology Supplement Manufacturing",
+        "Licensed Supplement Manufacturing",
+        "Dietary Supplement Marketing Services",
+        "Natural Supplement Manufacturing",
+        "Pharmaceutical Marketing Services",
+        "Cardiology Supplement Manufacturing",
+        "Rheumatology Supplement Manufacturing",
+        "Pharmaceutical Product Research and Development",
+        "Commercial Knowledge Consulting",
+        "Dietary Supplement Distribution",
+        "Medical Field Supplement Manufacturing",
+        "Media Marketing Consulting",
+        "Dietary Supplement Manufacturing",
+        "Pharmaceutical Product Distribution"
+    ],
+    "is_public": false,
+    "secondary_naics": null,
+    "bm25_score": 5.6201769945651865,
+    "source_stage0": true,
+    "source_stage1": true,
+    "semantic_score": 0.55222088098526,
+    "hybrid_final_score": 0.9405957412687979,
+    "soft_filter_note": "+ 0.21 ( Deep Cross-Encoder ) | + 0.10 ( Dual Match ) | + 0.03 ( Lexical BM25 ) | + 0.05 ( Geographic Match )"
+}
+
+--------------------------------------------------------------------------------
+

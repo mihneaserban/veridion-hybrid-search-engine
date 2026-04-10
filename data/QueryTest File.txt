@@ -1,0 +1,16 @@
+"B2B Software companies in Germany with more than 5 employees and under 5000 employees founded after 2005 exclude consulting"
+
+"SaaS and cloud platforms for enterprise management or B2B tech startups founded after 2015 with less than 200 employees"
+        -> la acest query avem 3 match up uri dintr-o parte in alta ( stage0 cu stage1 )
+        -> daca schimb anul in 2013 o sa avem doar 1 , desi ar fi trebuit sa avem mai multe
+
+"Financial services, banking software and fintech platforms in the United Kingdom with more than 500 employees exclude consulting"
+"Cybersecurity and data protection enterprise software founded before 2010"
+"Green energy, sustainability tracking and carbon footprint tools for manufacturing with less than 50 employees"
+
+Pharmaceutical companies in Switzerland
+Construction companies in the United States with revenue over $50 million
+
+Clean energy startups founded after 2018 with fewer than 200 employees
+E-commerce companies using Shopify or similar platforms
+Companies that manufacture or supply critical components for electric vehicle battery production
