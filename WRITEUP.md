@@ -66,7 +66,7 @@ This stage acts as the strict deterministic gatekeeper. It processes the raw dat
 
 Running in parallel (or subsequent to database initialization), this stage relies on a pre-trained Bi-Encoder (`all-MiniLM-L6-v2`).
 
-* **Rich Text Extraction:** We deliberately strip employee counts and geographic data from the company's semantic representation. This forces the AI to embed strictly *what the company does* (industry, core offerings, description) rather than metadata.
+* **Rich Text Extraction:** I deliberately strip employee counts and geographic data from the company's semantic representation. This forces the AI to embed strictly *what the company does* (industry, core offerings, description) rather than metadata.
 
 * **Query Cleaning:** Numerical and geographic constraints are regex-stripped from the user's query before vectorization so the AI focuses purely on the abstract business intent.
 
